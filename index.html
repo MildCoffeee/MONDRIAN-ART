@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mondarian</title>
+
+    <style>
+
+        /* Outer shell */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;   /* Two columns */
+            grid-template-rows: 700px;         /* Fixed height for rows */
+            grid-template-areas: 
+                "left right";
+        }
+
+        /* Left-side container */
+        .left-main {
+            background-color: red;
+            height: 700px;
+            margin: 50px 0px 50px 50px;
+          /*  border-top: 10px solid black;
+            border-right: none;
+            border-bottom: 10px solid black;
+            border-left: 10px solid black; */
+        }
+
+        /* Right-side container */
+        .right-main {
+            background-color: palegreen;
+            height: 700px;
+            margin: 50px 50px 50px 0px;
+            overflow: visible;
+        }
+
+        /* LEFT GRID SIGMAAAAA RAHHHHHHHHHH!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+        .left-container {
+            display: grid;
+            grid-template-columns: 0.7fr 1fr 1fr;
+            grid-template-rows: 0.5fr 1.3fr 0.5fr;     
+            grid-template-areas: 
+                "top-left top-middle top-right"
+                "left-middle middle middle-right"
+                "left-bottom bottom-middle bottom-right";
+            height: 100%;  
+        }
+
+      
+
+
+
+
+
+
+
+
+
+
+        .top-left {
+            background-color: yellow;
+            border-top: 8px solid black;
+            border-right: none;
+            border-bottom:none;
+            border-left: 8px solid black;
+        }
+
+        .top-middle {
+            background-color: red;
+            border-top: 8px solid black;
+            border-right: none;
+            border-bottom:none;
+            border-left: 8px solid black;
+        }
+
+        .top-right {
+            background-color: red;
+            border-top: 8px solid black;
+            border-right:  8px solid black;
+            border-bottom:none;
+            border-left: none;
+        }
+        
+
+        .left-middle {
+            background-color: yellow;
+            border-top: none;
+            border-right: none;
+            border-bottom:none;
+            border-left: 8px solid black;
+            margin-top: -10px;
+        }
+
+        .middle {
+            background-color: red;
+            border-top: none;
+            border-right: none;
+            border-bottom:none;
+            border-left: 8px solid black;
+            margin-top: -10px;
+        }
+
+        .middle-right {
+            background-color: red;
+            border-top: none;
+            border-right: 8px solid black;
+            border-bottom:none;
+            border-left: none;
+        }
+
+        .left-bottom {
+            background-color: lightgray;
+            border-top: 8px solid black;
+            border-right: none;
+            border-bottom:8px solid black;
+            border-left: 8px solid black;
+
+        }
+
+        .bottom-middle {
+            background-color: blue;
+            border: 8px solid black;
+        }
+
+        .bottom-right {
+            background-color: white;
+            border-top: 8px solid black;
+            border-right: 8px solid black;
+            border-bottom: none;
+            border-left: none;
+            
+        }
+
+
+        /* right side to */
+        .right-container {
+        display: grid;
+        grid-template-columns: 1.5fr 0.7fr 1.5fr 1.5fr;   /* More variation between columns */
+        grid-template-rows: 0.5fr 1.5fr 0.7fr 1.5fr; /* Irregular row heights */
+        grid-template-areas:
+         "one two three four"
+         "five six seven eight"
+         "nine ten eleven twelve"
+         "thirteen fourteen fifteen sixteen";
+         height: 100%;
+
+        }
+
+        .one {
+         background-color:blue;
+         border-top: 8px solid black;
+         border-right:none;
+         border-bottom: none;
+         border-left: none;
+        }
+
+        .two {
+        background-color: blue;
+        border-top: 8px solid black;
+            border-right: 8px solid black;
+            border-bottom: none;
+            border-left: none;
+        }
+
+        .three {
+         background-color: red;
+         border-top: 8px solid black;
+            border-right: none;
+            border-bottom: none;
+            border-left: none;
+        }
+
+        .four {
+         background-color: white;
+         border-top: none;
+            border-right: 8px solid black;
+            border-bottom: 8px solid black;
+            border-left: 8px solid black;
+        }
+
+        /* second row */
+
+        .five {
+         background-color: blue;
+         border-top: none;
+            border-right: none;
+            border-bottom: 8px solid black;
+            border-left: none;
+        }
+
+        .six {
+         background-color: blue;
+         border-top: none;
+            border-right: 8px solid black;
+            border-bottom: 8px solid black;
+            border-left: none;
+        }
+
+        .seven {
+        background-color: red;
+        border-top: none;
+            border-right: none;
+            border-bottom: 8px solid black;
+            border-left: none;
+        }
+
+        .eight {
+        background-color: blue;
+        border-top: none;
+            border-right: 8px solid black;
+            border-bottom: 8px solid black;
+            border-left: 8px solid black;
+        }
+
+        /* third row*/
+
+
+        .nine {
+         background-color: yellow;
+         border-top: none;
+            border-right: none;
+            border-bottom: 8px solid black;
+            border-left: none;
+        }
+
+        .ten {
+         background-color: yellow ;
+         border-top: none;
+            border-right: 8px solid black;
+            border-bottom: 8px solid black;
+            border-left: none;
+        }
+
+        .eleven {
+         background-color: darkgrey ;
+         border-top: none;
+            border-right: none;
+            border-bottom: 8px solid black;
+            border-left: none;
+        }
+
+        .twelve {
+         background-color: white;
+         border-top: none;
+            border-right: none;
+            border-bottom: 8px solid black;
+            border-left: 8px solid black;
+        }
+
+
+        /* fourth row */
+
+        .thirteen {
+         background-color:darkgrey;
+         border-top: none;
+            border-right: none;
+            border-bottom: 8px solid black;
+            border-left: none;
+            
+        }
+
+
+        .fourteen {
+         background-color: darkgrey;
+         border-top: none;
+            border-right: 8px solid black;
+            border-bottom: 8px solid black;
+            border-left: none;
+        }
+
+        .fifteen {
+         background-color:white ;
+         border-top: none;
+            border-right:none;
+            border-bottom: 8px solid black;
+            border-left: none;
+        }
+
+        .sixteen {
+         background-color:red ;
+         border-top: none;
+            border-right: 8px solid black;
+            border-bottom: 8px solid black;
+            border-left: 8px solid black;
+        }
+
+
+    </style> 
+</head>
+<body>
+    <div class="container">
+
+        <!-- Left siide yoooo -->
+        <div class="left-main" style="grid-area: left;">
+            <div class="left-container">
+                <div class="top-left"></div>
+                <div class="top-middle"></div>
+                <div class="top-right"></div>
+                <div class="left-middle"></div>
+                <div class="middle"></div>
+                <div class="middle-right"></div>
+                <div class="left-bottom"></div>
+                <div class="bottom-middle"></div>
+                <div class="bottom-right"></div>
+            </div>
+        </div>
+
+        <!-- RIGht side klsadjlsad lkjsal kjl skjdalkjsda lkjads  -->
+        <div class="right-main" style="grid-area: right;">
+     <div class="right-container">
+        <!-- da start-->
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+
+
+    <!-- SSPLITTT!!! -->
+        <div class="five"></div>
+        <div class="six"></div>
+        <div class="seven"></div>
+        <div class="eight"></div>
+
+
+        <!--HALVsda-->
+        <div class="nine"></div>
+        <div class="ten"></div>
+        <div class="eleven"></div>
+        <div class="twelve"></div>
+
+
+        <!-- last :)-->
+        <div class="thirteen"></div>
+        <div class="fourteen"></div>
+        <div class="fifteen"></div>
+        <div class="sixteen"></div>
+
+
+
+
+
+     </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
